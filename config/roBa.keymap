@@ -86,13 +86,40 @@
 
         BT_ARROW_CL {
             bindings = <
-&kp ESCAPE      &kp UP_ARROW            &trans           &kp LC(TAB)              &trans                            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&kp LEFT_ARROW  &kp DOWN_ARROW          &kp RIGHT_ARROW  &trans                   &kp END    &trans         &trans  &trans        &trans        &trans        &trans        &bt BT_CLR
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans           &kp LG(LS(RIGHT_ARROW))  &trans     &trans         &trans  &trans        &trans        &trans        &trans        &bt BT_CLR_ALL
-&trans          &trans                  &trans           &mkp LCLK                &mkp MCLK  &mkp RCLK      &trans  &trans                                                  &trans
+&kp ESCAPE      &kp UP_ARROW            &trans           &kp LC(TAB)              &trans                               &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&kp LEFT_ARROW  &kp DOWN_ARROW          &kp RIGHT_ARROW  &trans                   &kp END    &trans         &trans     &trans        &trans        &trans        &trans        &bt BT_CLR
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans           &kp LG(LS(RIGHT_ARROW))  &trans     &trans         &trans     &trans        &trans        &trans        &trans        &bt BT_CLR_ALL
+&trans          &trans                  &trans           &mkp LCLK                &mkp MCLK  &mkp RCLK      &kp PG_UP  &kp PG_DN                                               &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        AUTO_MOUSE {
+            bindings = <
+&trans          &kp UP_ARROW    &trans           &trans     &trans                               &trans     &trans  &trans  &trans  &trans
+&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans     &trans     &trans         &trans     &trans     &trans  &trans  &trans  &trans
+&trans          &trans          &trans           &trans     &trans     &trans         &trans     &trans     &trans  &trans  &trans  &trans
+&trans          &trans          &trans           &mkp LCLK  &mkp MCLK  &mkp RCLK      &kp PG_UP  &kp PG_DN                          &trans
+            >;
+        };
+
+        Scroll {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
         };
     };
 };
